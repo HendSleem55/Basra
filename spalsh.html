@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Basra</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Yeon+Sung" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="splash.css">
+</head>
+<body>
+    <div class="container">
+    	<p class="text-center gameName">BASRA</p>
+		<div class="row text-center">
+			<div class="col-sm-4 offset-4 p-3 rounded">
+				<form>
+				    <div class="form-group mb-5">
+				  		<h5 class="text-left mb-3">Enter your name :</h5>
+				   		<input type="text" class="form-control " placeholder="type your name ...">
+				    </div>
+                    <h5 class="mb-3 text-left">Choose your avatar:</h5>
+				    <div class="row mb-5">
+				    	<div class="col-sm-5 offset-1">
+				    		<img src="girl1.png" class="img-fluid rounded avatar">
+				    	</div>
+				    	<div class="col-sm-5">
+				    		<img src="boy1.png" class="img-fluid rounded avatar">
+				    	</div>
+				    </div>
+
+				    <button class="rounded pb-2 px-3" id="startGame">Start game</button>
+				</form>
+			</div>
+		</div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+	<script src="jquery-3.1.1.js"></script>
+		<script type="text/javascript">
+		var picSrc , nameValue;
+			$(".avatar").click(function(){
+				for(var x =0 ; x<2 ; x++){
+					$(".avatar").eq(x).removeClass("bordered");
+				}
+				$(this).addClass("bordered");
+				 picSrc = $(this).attr("src");
+			})
+
+
+
+			$( "input" ).change(function() {
+  				nameValue = $("input").val()
+			});
+
+			$("#startGame").click(function(){
+				var myData = [picSrc , nameValue];
+				localStorage.setItem('objectToPass', myData);
+   			    window.location.href = 'Card.html';
+ 		    	return false; 	
+ 			})
+		 </script>
+	<script type="text/javascript" src="myBackup.js"></script>
+
+
+
+</body>
+</html>

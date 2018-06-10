@@ -1,0 +1,54 @@
+body{
+	background-image: url("basra.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.gameName{
+	color: #c61021;
+	font-size: 6em;
+	font-family: 'Yeon Sung' ,cursive;
+	font-weight: bold;
+}
+
+.custom {
+	background-color: transparent;
+}
+
+.offset-4 {
+	background-color: rgba(137, 73, 17 , 0.4);
+	box-shadow:1px 5px 15px 5px #4f321a;
+}
+
+img {
+	width: 100px; 
+}
+
+img:hover {
+    box-shadow:1px 5px 15px 5px #4f321a;
+    cursor: pointer;
+
+}
+button {
+	background-color: transparent;
+	color: #c61021;
+	font-family: 'Yeon Sung' ,cursive;
+	font-weight: bold;
+	font-size: 30px;
+	border: none;
+    box-shadow:1px 5px 15px 5px #4f321a;
+}
+
+button:hover {
+	    box-shadow:1px 5px 15px 5px #4f321a;
+}
+
+.bordered{
+   border: 2px solid #937357;
+
+   box-shadow:1px 5px 15px 5px #4f321a;
+
+}
+
+
